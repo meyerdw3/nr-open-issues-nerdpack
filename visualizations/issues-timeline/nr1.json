@@ -1,0 +1,51 @@
+{
+  "schemaType": "VISUALIZATION",
+  "id": "issues-timeline",
+  "displayName": "Open Issues Timeline",
+  "description": "Stacked bar chart of alert issues over time, by priority. Built from issue lifecycle timestamps so it agrees with the Open Issues Table.",
+  "configuration": [
+    {
+      "name": "accountIds",
+      "title": "Account IDs",
+      "description": "Comma-separated account IDs (e.g. 1234567,7654321). Accepts a dashboard variable, e.g. {{accounts}}.",
+      "type": "string"
+    },
+    {
+      "name": "policyNames",
+      "title": "Policy names",
+      "description": "Comma-separated policy names to include (exact, case-insensitive). Leave blank for all policies. Accepts a dashboard variable, e.g. {{policies}}.",
+      "type": "string"
+    },
+    {
+      "name": "issueScope",
+      "title": "Issues to show",
+      "description": "All issues includes ones that have since closed. Only open shows just the issues that are still open now (what the table lists).",
+      "type": "enum",
+      "items": [
+        {
+          "title": "All issues",
+          "value": "all"
+        },
+        {
+          "title": "Only open issues",
+          "value": "open"
+        }
+      ],
+      "default": "all"
+    },
+    {
+      "name": "lookbackHours",
+      "title": "Lookback (hours)",
+      "description": "How far back the timeline goes",
+      "type": "number",
+      "default": 24
+    },
+    {
+      "name": "refreshSeconds",
+      "title": "Refresh interval (seconds)",
+      "description": "How often to re-query. Minimum 30.",
+      "type": "number",
+      "default": 120
+    }
+  ]
+}

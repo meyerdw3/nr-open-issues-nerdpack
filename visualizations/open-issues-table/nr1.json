@@ -1,0 +1,34 @@
+{
+  "schemaType": "VISUALIZATION",
+  "id": "open-issues-table",
+  "displayName": "Open Issues Table",
+  "description": "Live list of open alert issues, like Issues & Activity, filtered by policy and acknowledgement state.",
+  "configuration": [
+    {
+      "name": "accountIds",
+      "title": "Account IDs",
+      "description": "Comma-separated account IDs (e.g. 1234567,7654321). Accepts a dashboard variable, e.g. {{accounts}}.",
+      "type": "string"
+    },
+    {
+      "name": "policyNames",
+      "title": "Policy names",
+      "description": "Comma-separated policy names to include (exact, case-insensitive). Leave blank for all policies. Accepts a dashboard variable, e.g. {{policies}}.",
+      "type": "string"
+    },
+    {
+      "name": "unacknowledgedOnly",
+      "title": "Unacknowledged only",
+      "description": "Hide issues that have been acknowledged",
+      "type": "boolean",
+      "default": true
+    },
+    {
+      "name": "refreshSeconds",
+      "title": "Refresh interval (seconds)",
+      "description": "How often to re-query. Minimum 15.",
+      "type": "number",
+      "default": 60
+    }
+  ]
+}

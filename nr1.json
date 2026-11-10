@@ -1,0 +1,5 @@
+{
+  "schemaType": "NERDPACK",
+  "displayName": "Open Issues Table",
+  "description": "Dashboard widget listing open (optionally unacknowledged) alert issues filtered by policy, using NerdGraph"
+}

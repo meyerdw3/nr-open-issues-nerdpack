@@ -1,0 +1,7 @@
+.tl-root { display: flex; flex-direction: column; height: 100%; }
+.tl-wrap { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+.tl-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4px 16px; padding: 4px 8px; font-size: 11px; }
+.tl-legend { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.tl-key i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 4px; }
+.tl-chart { position: relative; flex: 1; min-height: 80px; }
+.tl-chart svg { position: absolute; top: 0; left: 0; }
